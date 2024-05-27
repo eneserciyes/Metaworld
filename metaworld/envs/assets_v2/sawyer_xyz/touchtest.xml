@@ -1,0 +1,32 @@
+<mujoco>
+  <extension>
+    <plugin plugin="mujoco.sensor.touch_grid"/>
+  </extension>
+  <include file="../scene/basic_scene.xml"/>
+  <include file="../objects/assets/hammer_dependencies.xml"/>
+  <include file="../objects/assets/xyz_base_dependencies.xml"/>
+
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" rgb1=".1 .2 .3" rgb2=".2 .3 .4" width="300" height="300" mark="edge" markrgb=".2 .3 .4"/>
+    <material name="grid" texture="grid" texrepeat="3 1" texuniform="true"/>
+    <hfield file="a.png" size="0.2 0.2 0.02 0.015"/>
+  </asset>
+
+  <visual>
+      <headlight ambient=".7 .7 .7" diffuse=".2 .2 .2" specular="0.1 0.1 0.1"/>
+  </visual>
+
+  <worldbody>
+    <geom name="a" type="hfield" hfield="a" rgba=".5 .5 .7 1"/>
+
+  </worldbody>
+
+  <sensor>
+    <plugin name="touch" plugin="mujoco.sensor.touch_grid" objtype="site" objname="touch">
+      <config key="size" value="11 11"/>
+      <config key="fov" value="60 60"/>
+      <config key="gamma" value="0.4"/>
+      <config key="nchannel" value="3"/>
+    </plugin>
+  </sensor>
+</mujoco>

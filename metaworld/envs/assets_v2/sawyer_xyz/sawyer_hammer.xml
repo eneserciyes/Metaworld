@@ -1,30 +1,45 @@
 <mujoco>
+    <extension>
+        <plugin plugin="mujoco.sensor.touch_grid"/>
+    </extension>
     <include file="../scene/basic_scene.xml"/>
     <include file="../objects/assets/hammer_dependencies.xml"/>
     <include file="../objects/assets/xyz_base_dependencies.xml"/>
 
     <worldbody>
         <include file="../objects/assets/xyz_base.xml"/>
-        <body name="hammerbody" pos="0 0.6 0.02">
-          <freejoint/>
-          <include file="../objects/assets/hammer.xml"/>
-
-        </body>
-
+        <body name="hammerbody" pos="0 0.6 1">
+            <freejoint/>
+            <include file="../objects/assets/hammer.xml"/>
+            </body>
+        <body name="ball" pos="0 0 1">
+            <freejoint/>
+            <geom type="ellipsoid" size=".03 .05 .01" pos="1.15 0.15 -0.68" mass="0.05" euler="0 0 0" rgba=".5 .5 .5 .3"/>
+            <geom type="ellipsoid" group="4" size=".003 .005 .001" pos="1.15 0.15 -0.68" mass="0.05" euler="0 0 0" rgba="0 0 1 .3"/>
+            </body>
 
         <body name="box" pos="0.24 0.85 0">
-          <include file="../objects/assets/hammerblock.xml"/>
-          <site name="nailHead" pos="0 -.215 .11" size="0.005" rgba="0.8 0 0 1"/>
-
-          <site name="goal" pos="0 -0.11 0.11" size="0.005" rgba="0 0.8 0 1"/>
-        </body>
-    </worldbody>
+            <include file="../objects/assets/hammerblock.xml"/>
+            <site name="nailHead" pos="0 -.215 .11" size="0.005" rgba="0.8 0 0 1"/>
+            <site name="goal" pos="0 -0.11 0.11" size="0.005" rgba="0 0.8 0 1"/>
+            </body>
+        </worldbody>
 
     <actuator>
         <position ctrllimited="true" ctrlrange="-1 1" joint="r_close" kp="400"  user="1"/>
         <position ctrllimited="true" ctrlrange="-1 1" joint="l_close" kp="400"  user="1"/>
-    </actuator>
+        </actuator>
+
     <equality>
         <weld body1="mocap" body2="hand" solref="0.02 1"></weld>
-    </equality>
-</mujoco>
+        </equality>
+
+    <sensor>
+        <plugin name="touch" plugin="mujoco.sensor.touch_grid" objtype="site" objname="touch">
+            <config key="size" value="15 15"/>
+            <config key="fov" value="45 45"/>
+            <config key="gamma" value="0"/>
+            <config key="nchannel" value="3"/>
+        </plugin>
+    </sensor>
+    </mujoco>

@@ -13,5 +13,6 @@
         <geom class="hmr_col" euler="1.57 0 0" pos="0.16 0.056 0" size="0.038 0.016" type="cylinder" mass=".3"/>
         <geom class="hmr_col" euler="1.57 0 0" pos="0.16 -0.056 0.0" size="0.038 0.016" type="cylinder" mass=".3"/>
         <geom class="hmr_col" euler="1.57 0 0" pos="0.16 -0.026 0.0" size="0.02 0.015" type="cylinder" mass=".1"/>
+
     </body>
 </mujocoinclude>
