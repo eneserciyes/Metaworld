@@ -3,6 +3,11 @@
     <include file="../objects/assets/hammer_dependencies.xml"/>
     <include file="../objects/assets/xyz_base_dependencies.xml"/>
 
+    <extension>
+        <plugin plugin="mujoco.sensor.touch_grid"/>
+        </extension>
+
+
     <worldbody>
         <include file="../objects/assets/xyz_base.xml"/>
         <body name="hammerbody" pos="0 0.6 0.02">
@@ -10,7 +15,6 @@
           <include file="../objects/assets/hammer.xml"/>
 
         </body>
-
 
         <body name="box" pos="0.24 0.85 0">
           <include file="../objects/assets/hammerblock.xml"/>
@@ -27,4 +31,19 @@
     <equality>
         <weld body1="mocap" body2="hand" solref="0.02 1"></weld>
     </equality>
+
+    <sensor>
+    <plugin name="touch-left" plugin="mujoco.sensor.touch_grid" objtype="site" objname="touch-left">
+      <config key="size" value="4 2"/>
+      <config key="fov" value="180 90"/>
+      <config key="gamma" value="0"/>
+      <config key="nchannel" value="6"/>
+    </plugin>
+    <plugin name="touch-right" plugin="mujoco.sensor.touch_grid" objtype="site" objname="touch-right">
+      <config key="size" value="4 2"/>
+      <config key="fov" value="180 90"/>
+      <config key="gamma" value="0"/>
+      <config key="nchannel" value="6"/>
+    </plugin>
+  </sensor>
 </mujoco>
