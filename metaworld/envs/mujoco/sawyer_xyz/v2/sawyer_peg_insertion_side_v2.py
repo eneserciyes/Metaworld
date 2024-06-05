@@ -30,7 +30,7 @@ class SawyerPegInsertionSideEnvV2(SawyerXYZEnv):
             the hole's position, as opposed to hand_low and hand_high
     """
 
-    def __init__(self, tasks=None, render_mode=None):
+    def __init__(self, tasks=None, render_mode=None, **kwargs):
         hand_init_pos = (0, 0.6, 0.2)
 
         hand_low = (-0.5, 0.40, 0.05)
@@ -45,6 +45,7 @@ class SawyerPegInsertionSideEnvV2(SawyerXYZEnv):
             hand_low=hand_low,
             hand_high=hand_high,
             render_mode=render_mode,
+            **kwargs
         )
 
         if tasks is not None:
