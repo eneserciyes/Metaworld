@@ -152,14 +152,9 @@
 
                                                   <!--IMPORTANT: For rougher contact with gripper, set higher friciton values for the other interacting objects -->
                                                   <body name="rightclaw" pos="0 -0.05 0" >
-
                                                       <geom class="base_col" name="rightclaw_it" condim="4" margin="0.001" type="box" user="0" pos="0 0 0" size="0.045 0.003 0.015"  rgba="1 1 1 1.0"   />
-
                                                       <joint name="r_close" pos="0 0 0" axis="0 1 0" range= "0 0.04" armature="100" damping="1000" limited="true"  type="slide"/>
-                                                      <!-- <joint name="r_close" pos="0 0 0" axis="0 1 0" range= "0 0.03" armature="100" damping="1000" limited="true"  type="slide"/>  -->
-
                                                       <!-- <site name="rightEndEffector" pos="0.0 0.005 0" size="0.044 0.008 0.012" type='box' /> -->
-
                                                       <!-- <site name="rightEndEffector" pos="0.035 0 0" size="0.01" rgba="1.0 0.0 0.0 1.0"/> -->
                                                       <site name="rightEndEffector" pos="0.045 0 0" size="0.01" rgba="1.0 0.0 0.0 1.0"/>
                                                       <body name="rightpad" pos ="0 .003 0" >
@@ -170,14 +165,29 @@
                                                   </body>
 
                                                   <body name="leftclaw" pos="0 0.05 0">
-                                                      <geom class="base_col" name="leftclaw_it" condim="4" margin="0.001" type="box" user="0" pos="0 0 0" size="0.045 0.003 0.015"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_l1" condim="4" margin="0.001" type="box" user="0" pos="0.039375 0 0.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_l2" condim="4" margin="0.001" type="box" user="0" pos="0.028125 0 0.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_l3" condim="4" margin="0.001" type="box" user="0" pos="0.016875 0 0.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_l4" condim="4" margin="0.001" type="box" user="0" pos="0.005625 0 0.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_l5" condim="4" margin="0.001" type="box" user="0" pos="-.005625 0 0.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_l6" condim="4" margin="0.001" type="box" user="0" pos="-.016875 0 0.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_l7" condim="4" margin="0.001" type="box" user="0" pos="-.028125 0 0.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_l8" condim="4" margin="0.001" type="box" user="0" pos="-.039375 0 0.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_r1" condim="4" margin="0.001" type="box" user="0" pos="0.039375 0 -.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_r2" condim="4" margin="0.001" type="box" user="0" pos="0.028125 0 -.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_r3" condim="4" margin="0.001" type="box" user="0" pos="0.016875 0 -.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_r4" condim="4" margin="0.001" type="box" user="0" pos="0.005625 0 -.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_r5" condim="4" margin="0.001" type="box" user="0" pos="-.005625 0 -.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_r6" condim="4" margin="0.001" type="box" user="0" pos="-.016875 0 -.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_r7" condim="4" margin="0.001" type="box" user="0" pos="-.028125 0 -.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
+                                                      <geom class="base_col" name="leftclaw_it_r8" condim="4" margin="0.001" type="box" user="0" pos="-.039375 0 -.0075" size="0.005625 0.003 0.0075"  rgba="0 1 1 1.0"  />
                                                       <joint name="l_close" pos="0 0 0" axis="0 1 0" range= "-0.03 0" armature="100" damping="1000" limited="true"  type="slide"/>
                                                       <!-- <site name="leftEndEffector" pos="0.0 -0.005 0" size="0.044 0.008 0.012" type='box' /> -->
                                                       <!-- <site name="leftEndEffector" pos="0.035 0 0" size="0.01" rgba="1.0 0.0 0.0 1.0"/> -->
+                                                      <site name="touch-left" type="box" pos="0.0 0.0 0.0" rgba="0 1 0 0.5" euler="1.57 0 0"/>
                                                       <site name="leftEndEffector" pos="0.045 0 0" size="0.01" rgba="1.0 0.0 0.0 1.0"/>
                                                       <body name="leftpad" pos ="0 -.003 0" >
                                                         <geom name="leftpad_geom" condim="4" margin="0.001" type="box" user="0" pos="0 0 0" size="0.045 0.003 0.015" rgba="0 1 1 1.0" solimp="0.95 0.99 0.01" solref="0.01 1" friction="2 0.1 0.002"  contype="1" conaffinity="1" />
-                                                        <site name="touch-left" type="box" pos="0.0 0.0 0.0" rgba="0 1 0 0" euler="-1.57 0 0" size="0.008"/>
                                                       </body>
 
                                                   </body>

@@ -8,9 +8,6 @@
     </extension>
     <worldbody>
       <include file="../objects/assets/xyz_base.xml"/>
-
-
-
         <body name="box" pos="0 0.9 0.12">
           <include file="../objects/assets/buttonbox.xml"/>
           <site name="buttonStart" pos="0 -0.1935 0" size="0.005" rgba="0 0.8 0 1"/>
