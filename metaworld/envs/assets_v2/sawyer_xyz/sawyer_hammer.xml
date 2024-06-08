@@ -34,13 +34,13 @@
 
     <sensor>
     <plugin name="touch-left" plugin="mujoco.sensor.touch_grid" objtype="site" objname="touch-left">
-      <config key="size" value="16 8"/>
+      <config key="size" value="32 32"/>
       <config key="fov" value="180 90"/>
       <config key="gamma" value="0"/>
       <config key="nchannel" value="6"/>
     </plugin>
     <plugin name="touch-right" plugin="mujoco.sensor.touch_grid" objtype="site" objname="touch-right">
-      <config key="size" value="16 8"/>
+      <config key="size" value="32 32"/>
       <config key="fov" value="180 90"/>
       <config key="gamma" value="0"/>
       <config key="nchannel" value="6"/>
