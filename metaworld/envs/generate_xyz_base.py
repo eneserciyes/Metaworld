@@ -4,14 +4,14 @@ tree = etree.parse("./assets_v2/objects/assets/xyz_base.xml")
 
 root = tree.getroot()
 
-leftpad_body = root.find(".//body[@name='rightpad']")
+leftpad_body = root.find(".//body[@name='leftpad']")
 
 geom_x = 32
 geom_z = 32
 
 claw_x = 0.045
 claw_y = 0.003
-claw_z = 0.030
+claw_z = 0.015
 
 size_x = claw_x / geom_x
 size_y = claw_y

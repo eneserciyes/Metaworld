@@ -7,6 +7,20 @@
     <extension>
         <plugin plugin="mujoco.sensor.touch_grid"/>
     </extension>
+    <sensor>
+    <plugin name="touch-left" plugin="mujoco.sensor.touch_grid" objtype="site" objname="touch-left">
+      <config key="size" value="32 32"/>
+      <config key="fov" value="90 90"/>
+      <config key="gamma" value="0"/>
+      <config key="nchannel" value="6"/>
+    </plugin>
+    <plugin name="touch-right" plugin="mujoco.sensor.touch_grid" objtype="site" objname="touch-right">
+      <config key="size" value="32 32"/>
+      <config key="fov" value="90 90"/>
+      <config key="gamma" value="0"/>
+      <config key="nchannel" value="6"/>
+    </plugin>
+    </sensor>
 
     <worldbody>
 
@@ -31,18 +45,4 @@
         <weld body1="mocap" body2="hand" solref="0.02 1" />
     </equality>
 
-    <sensor>
-    <plugin name="touch-left" plugin="mujoco.sensor.touch_grid" objtype="site" objname="touch-left">
-      <config key="size" value="4 2"/>
-      <config key="fov" value="90 90"/>
-      <config key="gamma" value="0"/>
-      <config key="nchannel" value="6"/>
-    </plugin>
-    <plugin name="touch-right" plugin="mujoco.sensor.touch_grid" objtype="site" objname="touch-right">
-      <config key="size" value="4 2"/>
-      <config key="fov" value="90 90"/>
-      <config key="gamma" value="0"/>
-      <config key="nchannel" value="6"/>
-    </plugin>
-  </sensor>
 </mujoco>
