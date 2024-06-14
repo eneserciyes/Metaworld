@@ -6,7 +6,6 @@ root = tree.getroot()
 
 leftpad_body = root.find(".//body[@name='rightpad']")
 
-
 geom_x = 32
 geom_z = 32
 
