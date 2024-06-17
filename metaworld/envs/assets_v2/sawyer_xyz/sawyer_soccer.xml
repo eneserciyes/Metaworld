@@ -21,7 +21,7 @@
     </sensor>
 
     <worldbody>
-      <include file="../objects/assets/xyz_base.xml"/>
+      <include file="../objects/assets/xyz_base_soccer.xml"/>
 
       <body name="soccer_ball" pos="0 0.6 0.03">
         <freejoint/>
